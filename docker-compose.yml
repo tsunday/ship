@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    image: local/server:latest
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:10
+
+
